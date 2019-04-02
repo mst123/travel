@@ -1,12 +1,12 @@
 <template>
     <div class="header">
-        <div class=header-left>
+        <div class="header-left">
             <span class="iconfont icon-return">&#xe624;</span>
         </div>
-        <div class=header-input>
+        <div class="header-input">
             <span class="iconfont">&#xe632;</span>
             输入城市、景点</div>
-        <div class=header-right>
+        <div class="header-right">
             城市
             <span class="iconfont icon-arrow">&#xe606;</span>
         </div>
