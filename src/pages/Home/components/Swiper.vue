@@ -2,8 +2,10 @@
     <div class="wrap">
         <swiper :options="swiperOption">
             <!-- slides -->
-			<swiper-slide  v-for="item in swiperList" :key="item.id">
-				<img class="swiper-img" :src=item.imgUrl alt="" />
+			<swiper-slide  v-for="item of swiperList" :key="item.id">
+                
+				<img class="swiper-img" src="../../../assets/img/miao/1551084808808.jpg" alt="" />
+                <!-- <img class="swiper-img" :src='require(item.imgUrl)' alt="" /> -->  <!-- 这个也不好用 -->
 			</swiper-slide>
             <!-- Optional controls -->
             <div class="swiper-pagination" slot="pagination"></div>
@@ -19,7 +21,8 @@ export default {
     data: function () {
         return {
             swiperOption: {
-                pagination:'.swiper-pagination'
+                pagination:'.swiper-pagination',
+                loop: true
             },
             swiperList: [{
                 id:'0001',
