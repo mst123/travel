@@ -6,67 +6,25 @@
                     <div class="img-box">
                         <img :src="item.imgUrl" alt="" >
                     </div>
-                
-                    <p class="nav-des" v-text="item.des"></p>
-                </div>   
+
+                    <p class="nav-des" v-text="item.desc"></p>
+                </div>
             </swiper-slide>
 
-        </swiper>    
+        </swiper>
     </div>
 </template>
 <script>
 export default {
-    name:'HomeIcons',
+	name:'HomeIcons',
+	props: {
+		iconList: Array
+	},
     data: function () {
         return {
             swiperOption: {
-                
-            },
-            iconList: [{
-                id: '0001',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '景点门票'
-            },
-            {
-                id: '0002',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '滑雪季'
-            },
-            {
-                id: '0003',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '泡温泉'
-            },
-            {
-                id: '0004',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '动植物园'
-            },
-            {
-                id: '0005',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '一日游'
-            },
-            {
-                id: '0006',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '必游榜单'
-            },
-            {
-                id: '0007',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '自然风光'
-            },
-            {
-                id: '0008',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '异国风情'
-            },
-            {
-                id: '0009',
-                imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554211021057&di=3c56e4343daad044c801adec1632592c&imgtype=0&src=http%3A%2F%2Fcdn6.haitou.cc%2Fcompany%2Flogo%2F62%2F5262_7e20.png%3Fv%3D1460098902',
-                des: '全部'
-            }]
+
+            }
         };
     },
     computed: {

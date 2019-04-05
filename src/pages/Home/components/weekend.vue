@@ -4,7 +4,7 @@
             周末去哪
         </div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
 				<div class="item-img-wrapper">
 					<img class="item-img" :src="item.imgUrl" alt="" />
 				</div>
@@ -19,40 +19,13 @@
 </template>
 <script>
 export default {
-    name: 'HomeWeekend',
+	name: 'HomeWeekend',
+	props: {
+		weekendList: Array
+	},
     data: function () {
         return {
-            recommendList: [{
-                id: '0001',
-                imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554372807378&di=4402512cfa224a313d6c0eb26e1002eb&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F07%2F65%2F16pic_765502_b.jpg',
-                title:'日本',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0002',
-                imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554372807378&di=4402512cfa224a313d6c0eb26e1002eb&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F07%2F65%2F16pic_765502_b.jpg',
-                title:'法国',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0003',
-                imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554372807378&di=4402512cfa224a313d6c0eb26e1002eb&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F07%2F65%2F16pic_765502_b.jpg',
-                title:'南京',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0004',
-                imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554372807378&di=4402512cfa224a313d6c0eb26e1002eb&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F07%2F65%2F16pic_765502_b.jpg',
-                title:'武汉',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0005',
-                imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554372807378&di=4402512cfa224a313d6c0eb26e1002eb&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F07%2F65%2F16pic_765502_b.jpg',
-                title:'巴黎',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0006',
-                imgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554372807378&di=4402512cfa224a313d6c0eb26e1002eb&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F07%2F65%2F16pic_765502_b.jpg',
-                title:'印度洋',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            }]
+
         }
     },
 }

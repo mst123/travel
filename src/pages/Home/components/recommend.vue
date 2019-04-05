@@ -8,7 +8,7 @@
                 <img class="item-img" :src="item.imgUrl" alt="">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
-                    <p class="item-desc">{{item.describe}}</p>
+                    <p class="item-desc">{{item.desc}}</p>
                     <button class="item-button">查看详情</button>
                 </div>
             </li>
@@ -18,44 +18,17 @@
 </template>
 <script>
 export default {
-    name: 'HomeRecommend',
+	name: 'HomeRecommend',
+	props: {
+		recommendList: Array
+	},
     data: function () {
         return {
-            recommendList: [{
-                id: '0001',
-                imgUrl: 'https://www.w3cplus.com/sites/default/files/blogs/w3cplus-ad-160.png',
-                title:'大连海洋馆',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0002',
-                imgUrl: 'https://www.w3cplus.com/sites/default/files/blogs/w3cplus-ad-160.png',
-                title:'大连海洋馆',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0003',
-                imgUrl: 'https://www.w3cplus.com/sites/default/files/blogs/w3cplus-ad-160.png',
-                title:'大连海洋馆',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0004',
-                imgUrl: 'https://www.w3cplus.com/sites/default/files/blogs/w3cplus-ad-160.png',
-                title:'大连海洋馆',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0005',
-                imgUrl: 'https://www.w3cplus.com/sites/default/files/blogs/w3cplus-ad-160.png',
-                title:'大连海洋馆',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            },{
-                id: '0006',
-                imgUrl: 'https://www.w3cplus.com/sites/default/files/blogs/w3cplus-ad-160.png',
-                title:'大连海洋馆',
-                describe:'阿斯达撒旦撒旦多啥多啥多'
-            }]
+
         }
     },
 }
-</script>s
+</script>
 <style scoped>
     .recommend-title{
         line-height: 0.8rem;
