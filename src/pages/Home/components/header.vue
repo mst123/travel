@@ -5,11 +5,15 @@
         </div>
         <div class="header-input">
             <span class="iconfont">&#xe632;</span>
-            输入城市、景点</div>
-        <div class="header-right">
-            {{this.city}}
-            <span class="iconfont icon-arrow">&#xe606;</span>
-        </div>
+            输入城市、景点
+		</div>
+		<router-link to="/city">
+			<div class="header-right">
+				{{this.city}}
+				<span class="iconfont icon-arrow">&#xe606;</span>
+			</div>
+		</router-link>
+
     </div>
 </template>
 <script>
