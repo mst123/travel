@@ -13,6 +13,9 @@
 		height: 0.72rem;
 		padding: 0.1rem;
 		background: #918bf1;
+		position: absolute;
+		top: 0.86rem;
+		width: 100%;
 	}
 	.search-input{
 		width: 100%;
