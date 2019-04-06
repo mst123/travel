@@ -1,9 +1,6 @@
 <template>
 	<ul class="list">
-		<li class="item">A</li>
-		<li class="item">A</li>
-		<li class="item">A</li>
-		<li class="item">A</li>
+		<li class="item" v-for="(value, key) of cities" :key="key">{{key}}</li>
 	</ul>
 </template>
 <script>
@@ -12,6 +9,9 @@
 		mounted() {
 
 		},
+		props: {
+			cities: Object
+		}
 	}
 </script>
 <style scoped>
