@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<city-header></city-header>
-		<city-search></city-search>
+		<city-search :cities="cities"></city-search>
 		<city-list :letter="letter" v-bind="cityData"></city-list>
 		<city-alphabet @clickLetter="clickLetter" :cities="cities"></city-alphabet>
 	</div>
