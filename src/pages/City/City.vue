@@ -2,8 +2,8 @@
 	<div>
 		<city-header></city-header>
 		<city-search></city-search>
-		<city-list v-bind="cityData"></city-list>
-		<city-alphabet v-bind="cityData"></city-alphabet>
+		<city-list :letter="letter" v-bind="cityData"></city-list>
+		<city-alphabet @clickLetter="clickLetter" :cities="cities"></city-alphabet>
 	</div>
 </template>
 <script>
@@ -22,7 +22,10 @@
 		},
 		data() {
 			return {
-				cityData:{}
+				cityData: {},
+				letter: '',
+				cities: {},
+				hotCities: ''
 			}
 		},
 		methods: {
@@ -36,7 +39,12 @@
 			getCityInfoSuc (data){
 				if (data.data.ret) {
 					this.cityData = data.data.data
+					this.cities = data.data.data.cities
+					this.hotCities = data.data.data.hotCities
 				}
+			},
+			clickLetter (letter){
+				this.letter = letter
 			}
 		},
 		mounted() {

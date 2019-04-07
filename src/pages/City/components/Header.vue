@@ -13,7 +13,6 @@
 </script>
 <style scoped>
 	.header{
-		position: absolute;
 		overflow: hidden;
 		height: 0.86rem;
 		line-height: 0.86rem;
@@ -21,8 +20,6 @@
 		color: #ffffff;
 		background: #918bf1;
 		font-size: 0.32rem;
-		top: 0;
-		left: 0;
 		width: 100%;
 	}
 	.header-return{

@@ -10,12 +10,11 @@
 </script>
 <style scoped>
 	.search{
-		height: 0.72rem;
+		height: 0.82rem;
 		padding: 0.1rem;
 		background: #918bf1;
-		position: absolute;
-		top: 0.86rem;
 		width: 100%;
+		box-sizing: border-box;
 	}
 	.search-input{
 		width: 100%;
