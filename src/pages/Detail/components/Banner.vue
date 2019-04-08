@@ -1,15 +1,41 @@
 <template>
-	<div class="banner">
-		<img class="banner-img" src="https://himg1.qunarzz.com/imgs/201811/30/C._M0DCifUaginvYBai480.jpg" alt="">
-		<div class="banner-info">
-			<div class="banner-title">沙嗲假哦个按实际哦个决赛</div>
-			<div class="banner-number"><span class="iconfont banner-icon">&#xe624;</span>39</div>
-		</div>
-	</div>
+    <div>
+        <div class="banner" @click="handleBannerClick">
+            <img class="banner-img" src="https://himg1.qunarzz.com/imgs/201811/30/C._M0DCifUaginvYBai480.jpg" alt="">
+            <div class="banner-info">
+                <div class="banner-title">沙嗲假哦个按实际哦个决赛</div>
+                <div class="banner-number"><span class="iconfont banner-icon">&#xe624;</span>39</div>
+            </div>
+        </div>
+        <common-gallery :imgs="imgs" v-show="showGallery" @close="galleryClose"></common-gallery>
+    </div>
 </template>
 <script>
+import CommonGallery from 'common/gallery/Gallery'
 export default {
-	name: 'DetailBanner'
+    name: 'DetailBanner',
+    components: {
+        CommonGallery: CommonGallery
+    },
+    data() {
+        return {
+            imgs: [
+                "https://himg1.qunarzz.com/imgs/201811/30/C._M0DCifUaginvYBai480.jpg",
+                "https://himg2.qunarzz.com/imgs/201811/30/C._M0DCiiyfb7F1H4xi480.jpg",
+                "https://himg3.qunarzz.com/imgs/201811/30/C._M0DCiiyynJIZCEOi480.jpg",
+                "https://himg2.qunarzz.com/imgs/201811/30/C._M0DCiiyyqwBymFVi480.jpg"
+            ],
+            showGallery:false
+        }
+    },
+    methods: {
+        handleBannerClick (){
+            this.showGallery = true
+        },
+        galleryClose (){
+            this.showGallery = false
+        },
+    },
 }
 </script>
 <style scoped>
