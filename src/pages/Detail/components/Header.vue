@@ -41,8 +41,12 @@ export default {
             }
         }
     },
-    activated() {
+    activated() { //keepalive 后才会有的钩子函数 每当组件展示都会执行
         window.addEventListener('scroll',this.handleScroll)
+        //事件解绑
+    },
+    deactivated() {  //与上述方法对应
+         window.removeEventListener('scroll',this.handleScroll)
     },
 }
 </script>
@@ -64,6 +68,7 @@ export default {
 	}
     .header-fixed{
         position: fixed;
+        z-index: 20;
         top: 0;
         left: 0;
 		overflow: hidden;

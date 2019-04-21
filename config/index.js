@@ -10,7 +10,7 @@ module.exports = {
 		// Paths
 		assetsSubDirectory: 'static',
 		assetsPublicPath: '/',
-		proxyTable: {
+		proxyTable: { //转发
 			'/api': {
 				target: 'http://localhost:8083',
 				pathRewrite: {
